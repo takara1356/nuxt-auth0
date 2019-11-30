@@ -6,24 +6,12 @@
         nuxt-auth0
       </h1>
       <h2 class="subtitle">
-        test
+        ログインしてないよ
       </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+        <el-form>
+          <el-button type="primary" @click="loginWithAuthZero">Auth0でログイン 
+          </el-button>
+        </el-form>
     </div>
   </div>
 </template>
@@ -34,6 +22,11 @@ import Logo from '~/components/Logo.vue'
 export default {
   components: {
     Logo
+  },
+  methods: {
+    loginWithAuthZero: function () {
+      this.$auth.loginWith('auth0')
+    }
   }
 }
 </script>

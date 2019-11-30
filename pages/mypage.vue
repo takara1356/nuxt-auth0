@@ -5,9 +5,7 @@
       <h1 class="title">
         nuxt-auth0
       </h1>
-      <h2 class="subtitle">
-        test
-      </h2>
+        <h1>Hello, {{this.$auth.$state.user.family_name}}</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
