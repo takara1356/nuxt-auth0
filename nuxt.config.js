@@ -40,7 +40,17 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
+    '@nuxtjs/auth', // 追加
   ],
+  auth: {
+    redirect: {
+      login: '/',  // 未ログイン時のリダイレクト先
+      logout: '/logout',  // ログアウト処理を実行した直後のリダイレクト先
+      callback: '/callback',  // コールバックURL
+      home: '/mypage',  // ログイン後に遷移するページ
+    },
+  },
   /*
   ** Build configuration
   */
