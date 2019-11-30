@@ -44,8 +44,14 @@ export default {
     '@nuxtjs/auth', // 追加
   ],
   auth: {
+    strategies: {
+        auth0: {
+          domain: 'dev-opx275iu.auth0.com',  // 追加
+          client_id: '5bdvM2NxKXReUvV7KcdDUWx3geZnQcTl'  // 追加
+        }
+    },
     redirect: {
-      login: '/',  // 未ログイン時のリダイレクト先
+      login: '/login',  // 未ログイン時のリダイレクト先
       logout: '/logout',  // ログアウト処理を実行した直後のリダイレクト先
       callback: '/callback',  // コールバックURL
       home: '/mypage',  // ログイン後に遷移するページ
